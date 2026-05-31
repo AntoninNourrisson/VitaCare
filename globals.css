@@ -1,0 +1,222 @@
+/* =============================================
+   VitaCare — Variables CSS & Styles globaux
+   ============================================= */
+
+:root {
+  /* Palette bleu-blanc-rouge (sobre & élégant) */
+  --vc-blue:        #002654;
+  --vc-blue-mid:    #1B3A6B;
+  --vc-blue-light:  #2E5090;
+  --vc-blue-pale:   #E8EEF7;
+  --vc-white:       #FFFFFF;
+  --vc-red:         #CE1126;
+  --vc-red-pale:    #FDE8EB;
+  --vc-gold:        #C9A84C;
+  --vc-dark:        #1A1A2E;
+  --vc-gray:        #4A5568;
+  --vc-gray-light:  #F8F9FA;
+  --vc-border:      #DEE2E6;
+
+  /* Couleurs pôles */
+  --pole-reeducation: #0077B6;
+  --pole-preparation: #2D6A4F;
+  --pole-recuperation: #6A4C93;
+  --pole-mental:      #E76F51;
+  --pole-nutrition:   #F4A261;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--vc-dark);
+  background-color: var(--vc-white);
+}
+
+/* ===== Boutons principaux ===== */
+.btn-vitacare {
+  background-color: var(--vc-blue);
+  color: var(--vc-white);
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.btn-vitacare:hover {
+  background-color: var(--vc-blue-light);
+  color: var(--vc-white);
+  transform: translateY(-1px);
+}
+.btn-vitacare-red {
+  background-color: var(--vc-red);
+  color: var(--vc-white);
+  border: none;
+  font-weight: 600;
+}
+.btn-vitacare-red:hover {
+  background-color: #a50e20;
+  color: var(--vc-white);
+}
+.btn-vitacare-outline {
+  border: 2px solid var(--vc-blue);
+  color: var(--vc-blue);
+  background: transparent;
+  font-weight: 600;
+}
+.btn-vitacare-outline:hover {
+  background-color: var(--vc-blue);
+  color: var(--vc-white);
+}
+
+/* ===== Navbar ===== */
+.navbar-vitacare {
+  background-color: var(--vc-blue);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.navbar-vitacare .navbar-brand {
+  color: var(--vc-white);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+}
+.navbar-vitacare .nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar-vitacare .nav-link:hover,
+.navbar-vitacare .nav-link.active {
+  color: var(--vc-white) !important;
+}
+.navbar-vitacare .nav-link.active {
+  border-bottom: 2px solid var(--vc-gold);
+}
+
+/* ===== Cards ===== */
+.card-vitacare {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,38,84,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+.card-vitacare:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,38,84,0.14);
+}
+
+/* ===== Badges pôles ===== */
+.badge-pole {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-reeducation  { background-color: var(--pole-reeducation);  color: #fff; }
+.badge-preparation  { background-color: var(--pole-preparation);  color: #fff; }
+.badge-recuperation { background-color: var(--pole-recuperation); color: #fff; }
+.badge-mental       { background-color: var(--pole-mental);       color: #fff; }
+.badge-nutrition    { background-color: var(--pole-nutrition);     color: #fff; }
+
+/* ===== Badges statut RDV ===== */
+.badge-statut-en_attente { background-color: #FFC107; color: #000; }
+.badge-statut-confirme   { background-color: #198754; color: #fff; }
+.badge-statut-refuse     { background-color: var(--vc-red); color: #fff; }
+.badge-statut-annule     { background-color: var(--vc-gray); color: #fff; }
+.badge-statut-termine    { background-color: #0dcaf0; color: #000; }
+
+/* ===== Badges rôle ===== */
+.badge-role-admin     { background-color: var(--vc-gold);  color: #000; }
+.badge-role-praticien { background-color: var(--vc-blue);  color: #fff; }
+.badge-role-sportif   { background-color: #198754;         color: #fff; }
+.badge-role-visiteur  { background-color: var(--vc-gray);  color: #fff; }
+
+/* ===== Hero ===== */
+.hero-section {
+  background: linear-gradient(135deg, var(--vc-blue) 0%, var(--vc-blue-light) 100%);
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Sidebar ===== */
+.sidebar-vitacare {
+  background-color: var(--vc-blue-pale);
+  border-right: 1px solid var(--vc-border);
+  min-height: calc(100vh - 64px);
+}
+.sidebar-vitacare .nav-link {
+  color: var(--vc-dark);
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin: 2px 0;
+  transition: background-color 0.15s;
+}
+.sidebar-vitacare .nav-link:hover {
+  background-color: rgba(0,38,84,0.08);
+  color: var(--vc-blue);
+}
+.sidebar-vitacare .nav-link.active {
+  background-color: var(--vc-blue);
+  color: #fff;
+}
+
+/* ===== Créneaux ===== */
+.creneau-slot {
+  border: 2px solid var(--vc-border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.creneau-slot.available {
+  border-color: #198754;
+  color: #198754;
+  background: #f0fff4;
+}
+.creneau-slot.available:hover {
+  background: #198754;
+  color: #fff;
+}
+.creneau-slot.selected {
+  background: var(--vc-blue);
+  border-color: var(--vc-blue);
+  color: #fff;
+}
+.creneau-slot.taken {
+  border-color: var(--vc-gray);
+  color: var(--vc-gray);
+  background: #f8f9fa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ===== Notifications ===== */
+.notification-item {
+  padding: 12px 16px;
+  border-left: 4px solid var(--vc-blue-pale);
+  border-bottom: 1px solid var(--vc-border);
+  transition: background 0.15s;
+}
+.notification-item.unread {
+  background-color: var(--vc-blue-pale);
+  border-left-color: var(--vc-blue);
+}
+.notification-item:hover {
+  background-color: #f0f4fa;
+}
+
+/* ===== Spinner ===== */
+.spinner-vitacare {
+  color: var(--vc-blue);
+}
+
+/* ===== Utilitaires ===== */
+.text-vitacare-blue  { color: var(--vc-blue) !important; }
+.text-vitacare-red   { color: var(--vc-red) !important; }
+.text-vitacare-gold  { color: var(--vc-gold) !important; }
+.bg-vitacare-blue    { background-color: var(--vc-blue) !important; }
+.bg-vitacare-pale    { background-color: var(--vc-blue-pale) !important; }
+.border-vitacare     { border-color: var(--vc-blue) !important; }
